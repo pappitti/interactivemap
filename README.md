@@ -1,4 +1,9 @@
-# Interactive Map  
+# React Interactive Map  
+
+
+https://github.com/pappitti/interactivemap/assets/90358606/d1824410-bfa2-4ff5-9842-eae3982701b5
+
+
 This interactive map was used in the app [https://offthecharts.vercel.app/locate]. At inception of the feature idea, the objective was two-fold:  
 - data visualization : geographical breakdown of "assets" owned by [Sorare] users
 - showcase how AI code-assistant can enhance a developer's capabilities / productivity  
