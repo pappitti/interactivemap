@@ -100,7 +100,7 @@ function MapContent (props){
         <div className="map-wrapper">
             <svg baseProfile="tiny" fill="#ececec" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth=".2" version="1.2" viewBox="0 0 2000 857" width="100%" xmlns="http://www.w3.org/2000/svg" className="world-map">
                 {Object.keys(countriesDict).map((item,index)=>countriesDict[item].path.map((subitem,subindex)=>
-                    <path key={index+"-"+subindex} id={item} d={subitem} fill={(countries[item].value>0)?`rgba(255,104,79,${countries[item].value/maxValue*0.8+0.2})`:"#ececec"} onMouseOver={(e)=>showTooltip(e)} onMouseOut={(e)=>hideTooltip(e)} onClick={(e)=>props.selectCountry(e)}></path> /*sets state when mouse passes over a country, and clears stats when it leaves. If value is zero, country is grey, otherwise it is orange and opacity defines the shade as a percentage of max value (baseline at 0.2)*/
+                    <path key={index+"-"+subindex} id={item} d={subitem} fill={(countries[item].value>0)?`rgba(255,104,79,${countries[item].value/maxValue*0.8+0.2})`:"#ececec"} onMouseOver={(e)=>showTooltip(e)} onMouseOut={(e)=>hideTooltip(e)} onClick={(e)=>props.selectCountry(e)}></path> /*sets state when mouse passes over a country, and clears stats when it leaves. If value is zero, country is grey, otherwise it is orange and opacity defines the shade as a percentage of max value (baseline at 0.2). When user clicks on a country, it passing an event to a function called selectCountry, which does something (e.g shows details)*/
                 ))}
             </svg>
             <div className="map-title"> {/*title becomes tooltip on over (same structure, only content changes)*/}
